@@ -24,6 +24,13 @@ jobs:
           unzip -q preloader.zip
           mv preloader-android-main preloader-sdk
 
+      - name: Verify preloader SDK
+        run: |
+          echo "=== SDK structure ==="
+          find preloader-sdk -type f | sort | head -100
+          echo "=== Required headers ==="
+          find preloader-sdk -type f \( -name "Gloss.h" -o -name "LegacyMod.h" -o -name "LegacyInput.h" \)
+
       - name: Build FreeCam
         run: |
           cmake \
@@ -43,3 +50,4 @@ jobs:
           path: |
             build/libfreecam.so
             freecam_mod/manifest.json
+
