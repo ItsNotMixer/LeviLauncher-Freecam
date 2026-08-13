@@ -15,8 +15,8 @@ add_library(freecam SHARED
 )
 
 target_include_directories(freecam PRIVATE
+    ${PRELOADER_SDK}/include
     ${PRELOADER_SDK}/src
-    ${PRELOADER_SDK}/src/pl
 )
 
 find_library(log-lib log)
