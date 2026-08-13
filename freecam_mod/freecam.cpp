@@ -10,8 +10,8 @@
 
 // Gloss и Mod хедеры
 #include "pl/Gloss.h"
-#include "pl/Mod.h"
-#include "pl/PreloaderInput.h"
+#include "pl/legacy/LegacyMod.h"
+#include "pl/legacy/LegacyInput.h"
 
 #define TAG "FreeCam"
 #define LOGI(...) __android_log_print(ANDROID_LOG_INFO,  TAG, __VA_ARGS__)
